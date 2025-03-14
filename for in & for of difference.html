@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>for of 與 for in 與 iterator</h1>
+    <script>
+        // for of 可以迭代 「可迭代的物件」 iterable objects ES6
+        const array1 = ["a", "b", "c"];
+        for (const element of array1) 
+        {
+        console.log(element);
+        }
+        let string = 'hello'
+        for (let str of string) 
+        {
+        console.log(str);
+        }
+
+        // next?
+
+        // for in 迭代可列舉屬性
+        // mdn範例
+        var o = { a: 1, b: 2, c: 3 };
+        function show_props(obj, objName) 
+        {
+            var result = "";
+            for (var prop in obj) 
+            {
+                result = result + objName + "." + prop + " = " + obj[prop] + "\n";
+            }
+            return result;
+        }
+        alert(show_props(o, "o"));
+
+
+    </script>
+</body>
+</html>
