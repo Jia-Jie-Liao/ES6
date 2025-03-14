@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>let 與 const</h1>
+    <script>
+        // 1.作用域的改變
+        // var => function
+        // let const => {}
+
+        // ex 1 - for 迴圈
+        var i = 0
+        for (var i = 0; i < 10; i++) 
+        {
+            console.log('迴圈跑第' + i + '次');
+        }
+        console.log(i);
+        
+        // ex 2 - if else
+        var x = 1
+        if (x === 1) 
+        {
+            let x = 5
+        } else 
+        {
+            let x = 10
+        }
+        console.log(x);
+
+        // ex 3 - IIFE
+        (function () 
+        {
+            var x = 1
+        })()
+        {
+            let x = 1
+        }
+        // 瀏覽器不一定支援 ES6
+        // chrome 確定支援
+        // babel ES6 -> ES5
+
+        // const 注意事項
+        // const 常數 -> 定義了之後不能改變的數
+        const restTime = 60 * 60 * 2
+        const dog = 'peter'
+        // dog = 'mary'
+
+        // 使用 const 定義物件
+        const person = 
+        {
+            name: 'Liao',
+            age: 20
+        }
+        person.name = 'jason'
+        console.log(person);
+        // 物件本身無改變，定義物件位址，物件裡的值可改變
+    </script>
+</body>
+</html>
